@@ -138,15 +138,17 @@ print("player_2 : ", player_2)
 
 print("withdraw_in_game :", withdraw_in_game)
 
-plt.hist(player_1, label=f'player one {player_1}')
+plt.plot([1, 1], [0, player_1], "-k", label=f'player one {player_1}')
 
-plt.hist(player_2, label=f"player two {player_2}")
+plt.plot([2, 2], [0, player_2], "-r", label=f"player two {player_2}")
 
-plt.hist(withdraw_in_game, label=f"withdraw val in game{withdraw_in_game}")
+plt.plot([3, 3], [0, withdraw_in_game], "-m",
+         linewidth=1, markersize=4, label=f"withdraw val in game {withdraw_in_game}")
 
 
 plt.legend()
 
-plt.axis([0, 100, 0, 2])
+plt.axis([0, 4, 0, 100])
 
 plt.show()
+
